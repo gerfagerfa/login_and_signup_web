@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_and_signup_web/constants.dart';
-import 'package:login_and_signup_web/shared_widgets.dart';
+import 'package:login_and_signup_web/action_button.dart';
 
 class SignUp extends StatefulWidget {
 
@@ -107,7 +107,7 @@ class _SignUpState extends State<SignUp> {
                         height: 64,
                       ),
 
-                      customButtom("Create Account"),
+                      actionButton("Create Account"),
 
                       SizedBox(
                         height: 32,

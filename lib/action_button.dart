@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:login_and_signup_web/constants.dart';
 
-Widget customButtom(String text){
+Widget actionButton(String text){
   return Container(
     height: 50,
     width: double.infinity,

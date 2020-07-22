@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   height: double.infinity,
                   width: size.width / 2,
-                  color: Color(0xFFFE4350),
+                  color: kPrimaryColor,
                 ),
                 Container(
                   height: double.infinity,
@@ -186,21 +186,23 @@ class _HomePageState extends State<HomePage> {
               duration: Duration(milliseconds: 500),
 
               //Animation 1
-              /*transitionBuilder: (widget, animation) => RotationTransition(
-                turns: animation,
-                child: widget,
-              ),*/
+              //transitionBuilder: (widget, animation) => RotationTransition(
+              //  turns: animation,
+              //  child: widget,
+              //),
               //switchOutCurve: Curves.easeInOutCubic,
               //switchInCurve: Curves.fastLinearToSlowEaseIn,
 
               //Animation 2
-              transitionBuilder: (Widget child, Animation<double> animation) => ScaleTransition(child: child, scale: animation),
+              transitionBuilder: (widget, animation) => ScaleTransition(
+                child: widget, 
+                scale: animation
+              ),
 
               child: selectedOption == Option.LogIn
               ? LogIn(
                 onSignUpSelected: () {
                   setState(() {
-                    print("vamos al signup");
                     selectedOption = Option.SignUp;
                   });
                 },
@@ -208,7 +210,6 @@ class _HomePageState extends State<HomePage> {
               : SignUp(
                 onLogInSelected: () {
                   setState(() {
-                    print("vamos al login");
                     selectedOption = Option.LogIn;
                   });
                 },
